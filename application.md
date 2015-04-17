@@ -68,7 +68,7 @@ DOM操作によって起きるXSSをDOM Based XSSと呼びます。
 たとえば、`location.hash`などから情報を取得し、そのURLに飛ぶというケースを考えましょう。  
 
 ```javascript
-var path = location.search.hash(1);
+var path = location.hash.substring(1);
 location.href = path;
 ```
 
