@@ -75,11 +75,7 @@ location.href = path;
 たとえばこのコードは一見オープンリダイレクタしか無いように見えますが、`javascript:alert(1)`といった具合にjavascriptスキームを入れることによりXSSが可能です。  
 このようなXSSを防ぐためにはDOM APIを正しく利用する必要があります。
 
-## 参考文献
-
-* [JavaScriptでリンク先URLがhttp/httpsか確認する方法](http://d.hatena.ne.jp/hasegawayosuke/20141030)
-
-# JavaScriptエスケープ
+## JavaScriptエスケープ
 
 最近はJavaScriptエスケープも重要になってきている。
 例えばHTML中に書かれたScriptタグの中に任意のコードを埋め込まれたらまずいのです。
@@ -90,6 +86,13 @@ PerlではJavaScript::Value::Escapeを使うとうまいことやってくれる
 
 JavaScriptコード内でJavaScriptを文字列に埋め込まないといけないけーすはevalするとき以外無いはずなので、
 可能な限りevalを使わない事をおすすめします。JSONはJSON.parseつかうべし。(ECMAScript5対応ブラウザではビルドイン/古いブラウザにも対応するならjson2.js)
+
+
+## 参考文献
+
+* [JavaScriptでリンク先URLがhttp/httpsか確認する方法](http://d.hatena.ne.jp/hasegawayosuke/20141030)
+* http://d.hatena.ne.jp/kazuhooku/20131106/1383690938
+* http://d.hatena.ne.jp/kazuhooku/20131107/1383837457
 
 # SQLインジェクション
 
