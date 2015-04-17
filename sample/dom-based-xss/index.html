@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Based XSSのサンプル</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./kiken.js"></script>
+  </head>
+  <body>
+    <h1>DOM Based XSSのサンプル</h1>
+    <form id="keyword-search-form" action="javascript:void(0)">
+      <input type="search" name="keyword" />
+      <button type="submit">I'm feeling lucky!</button>
+    </form>
+    <span id="not-found-msg"></span>
+    <ul id="list"></ul>
+  </body>
+</html>
